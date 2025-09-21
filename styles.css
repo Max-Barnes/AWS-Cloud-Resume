@@ -7,6 +7,9 @@ html, body {
     color:#fff;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: -10%;
+    --background-color: #000000;
+    --accent: #6f20Ab;
+/* grape: #6f20Ab */
 }
 .navbar {
     background-color: #000000b0;
@@ -147,7 +150,7 @@ html, body {
     background-color:#333333
 }
 .experience-category h2 {
-    border-bottom: #b0564c 3px solid;
+    border-bottom: var(--accent) 3px solid;
     border-radius: 5px;
     font-size: 2.5rem;
 }
@@ -163,7 +166,7 @@ html, body {
     color:#fff;
 }
 .experience-button.active {
-    background-color:#e74c3c;
+    background-color:var(--accent);
     color: #fff;
 }
 .section-portfolio {
@@ -201,6 +204,37 @@ html, body {
     margin: 5%;
 }
 
+.project-category { 
+    display: none;
+    animation: fadeIn 2s;
+}
+.project-category.active {
+    display:block;
+}
+.project-box {
+
+}
+.project-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.project-button {
+    width: 100%;
+    height: 100%;
+    min-height: 10vh;
+    background-color: #303030;
+    color:#fff;
+    font-size: 1.5rem;
+}
+.project-button.active {
+    background-color:var(--accent);
+
+}
+.project-button:hover {
+    cursor:pointer;
+    background-color: var(--accent);
+
+}
 .category-buttons {
             display: flex;
             justify-content: center;
@@ -225,7 +259,7 @@ html, body {
         }
 
         .category-btn.active {
-            background: #e74c3c;
+            background: var(--accent);
         }
 
         .skill-category {
@@ -254,13 +288,13 @@ html, body {
             background: #3b3b3b;
             margin-bottom: 8px;
             padding: 12px 15px;
-            border-left: 4px solid #e74c3c;
+            border-left: 4px solid var(--accent);
             border-radius: 4px;
             transition: all 0.3s ease;
         }
 
         .skills-list li:hover {
-            background: #b0564c;
+            background: var(--accent);
             transform: translateX(5px);
         }
 
