@@ -6,7 +6,7 @@
     <div class="navbar">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#portfolio">Projects</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
@@ -30,6 +30,7 @@
             always attack my work head on by choosing large targets and breaking
             them down into manageable pieces.
           </p>
+          <p>Outside of tech I love rock and metal music. With a little bit of smooth jazz and breakcore mixed in. I enjoy cooking, hiking, working out and eating healthy.</p>
           <div>
             <a
               id="download-button"
@@ -136,47 +137,99 @@
       <p id="experience"></p>
       <div class="section-experience">
         <h1>Technical Experience</h1>
+        <div class="experience-container">
+        <div class="experience-buttons">
+          <button class="experience-button active" data-category="portage">
+            Portage Learning IT Intern
+          </button>
+          <button class="experience-button" data-category="rmu">
+            Robert Morris University Technology Assistant
+          </button>
+        </div>
+        
+          <div class="experience-category active" id="portage">
+          <h2>IT Intern at Portage Learning</h2>
+          <h3>Date: May 2025 - Aug 2025</h3>
+          <p>Configured device deployments and MDM management using Intune, Entra, and JAMF to streamline provisioning, enforce compliance policies and support hybrid endpoint security </p>
+          <p>Assisted in the setup and maintenance of server infrastructure and Cisco Meraki hardware, including physical installation and configuration through the Meraki interface and helped deploy environmental sensors to support system uptime and redundancy</p>
+          <p>Developed powershell scripts to automate Intune application deployments and perform targeted Windows registry modifications, streamlining device configuration and improving deployment efficiency</p>
+          <p>Supported the creation and documentation security policies, training programs, and a disaster recovery plan, enabling faster execution of security initiatives by the Cyber Security and Data Governance Board</p>
+        </div>
+        <div class="experience-category" id="rmu">
+          <h2>Technology Assistant at Robert Morris University</h2>
+          <h3>Date: Nov 2024 - Present</h3>
+          <p>Assisted in the implementation of digital signage integrations, incorporating Revolution API along with Rise Vision and Google Apps Script to streamline operations</p>
+          <p>Created an automated workflow with Google Apps Script on campus Excel Data to keep events accurate to local times and reducing manual efforts</p>
+          <p>Automated and tested scripts for IT tasks essential for events held across campus resulting in increased operational efficiency</p>
+          <p>Deployed and automated Raspberry PIs using GitHub Actions for continuous and convenient updates of kiosks around campus</p>
+        </div>
+        </div>
       </div>
       <p id="portfolio"></p>
       <div class="section-portfolio">
-        <h1>Projects I've Worked On</h1>
-        <div class="project-box"></div>
+        <h1>Projects I'm Working On</h1>
+        <div class="project-box">
+          <div class="project-buttons">
+            <button class="project-button active">AWS Cloud Resume Challenge</button>
+            <button class="project-button">Crucible Cyber Range with Kubernetes</button>
+            <button class="project-button">Homelab</button>
+          </div>
+          <div class="project-category active">
+            <h2>AWS Cloud Resume Challenge</h2>
+            <p>This website was hosted with AWS</p>
+          </div>
+          <div class="project-category">
+            <h2>Crucible Cyber Range</h2>
+            <p>Kubernetes</p>
+          </div>
+          <div class="project-category">
+            <h2>Homelab</h2>
+            <p>Homelab</p>
+          </div>
+        </div>
       </div>
       <p id="education"></p>
       <div class="section-education">
-        <h1>Education</h1>
+        <h1>Education and Certification</h1>
+        <h2>Bachelors of Science - Cyber Security</h2>
+        <h3>Fall 2024 - Fall 2026</h3>
+        <h2>Linux Foundation Certified System Admin</h2>
+        <h3>Currently Pursuing</h3>
+        <p></p>
         </div>
       </div>
-      <p id="contact"></p>
+
       <div class="section-contact">
-        <h1>Contact</h1>
         <div class="contact-wrapper">
           <p>
             Have any questions or opportunities? Don&apos;t hesitate to reach
             out—I&apos;ll get back to you as soon as possible!
           </p>
-          <p>Email: maxbarnes.dev@gmail.com</p>
           <div class="link-wrapper">
             <a href="https://www.linkedin.com/in/maxbarnesdev/">
               <image
-                src="/images/linkedin.png"
-                width="{100}"
-                height="{100}"
+                src="images/linkedin.svg"
+                width="60"
+                height="60"
                 alt="Linkedin Logo"
               />
             </a>
             <a href="https://github.com/Max-Barnes">
               <image
-                src="/images/github.png"
-                width="{100}"
-                height="{100}"
+                src="images/github.svg"
+                width="60"
+                height="60"
                 alt="Github Logo"
               />
+            </a>
+            <a href="mailto:maxbarnes.dev@gmail.com">
+              <image src="images/email.svg" height="60" width="60" alt="email"/>
             </a>
           </div>
         </div>
       </div>
     </div>
+          <p id="contact"></p>
     <script src="script.js"></script>
   </body>
 </main>

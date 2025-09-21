@@ -6,6 +6,7 @@ html, body {
     scroll-behavior: smooth;
     color:#fff;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: -10%;
 }
 .navbar {
     background-color: #000000b0;
@@ -40,6 +41,16 @@ html, body {
         opacity:1;
     }
 }
+@keyframes logoGlowPulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+                transform: scale(1);
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+                transform: scale(1.02);
+            }
+        }
 .header-top {
     height: 90vh;
     width: 100%;
@@ -52,17 +63,14 @@ html, body {
     justify-content: center;
     align-items: center;
     font-size: 10em;
-    color:#000000;
+    color:#fff;
     font-weight: 700;
       -webkit-text-stroke: 1px #282828;
 	text-shadow: 0px 4px 4px #282828;
 }
 
 .header-top p {
-    animation: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    animation: logoGlowPulse 2.5s ease-in-out infinite;
 }
 .container {
     padding: 0 10% 0 10%;
@@ -71,8 +79,8 @@ html, body {
     background-color: #000000;
 }
 .section-about{
-    min-height: 70vh;
-    max-height: 70vh;
+    min-height: 80vh;
+    max-height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -90,7 +98,8 @@ html, body {
     font-size: 1.2em;
     width: 100%;
     line-height: 2em;
-    justify-content: center;
+    justify-content:center;
+    padding-bottom: 15%;
 }
 .about-skills {
     display: flex;
@@ -107,12 +116,89 @@ html, body {
     height: 30vh;
 }
 .section-portfolio {
-    height: 30vh;
+    height: 100vh;
+}
+.section-experience {
+    height: 70vh;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    background-color: #282828;
+}
+.experience-buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.experience-button:hover {
+    cursor:pointer;
+}
+.experience-buttons * {
+    height: 5rem;
+    font-size: 1.5rem;
+}
+.experience-category {
+    min-height: 100%;
+    width: 100%;
+    padding: 20px 30px 0 30px;
+    background-color:#333333
+}
+.experience-category h2 {
+    border-bottom: #b0564c 3px solid;
+    border-radius: 5px;
+    font-size: 2.5rem;
+}
+.experience-category h3 {
+    font-weight: 800;
+    font-size: 2rem;
+}
+.experience-category p {
+    font-size: 1.5rem;
+}
+.experience-button {
+    background-color: #303030;
+    color:#fff;
+}
+.experience-button.active {
+    background-color:#e74c3c;
+    color: #fff;
+}
+.section-portfolio {
+    margin-top: 5%;
 }
 .section-contact {
-    height: 30vh;
-}.section-experience {
-    height: 70vh;
+    background-image: url(images/background.gif);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:35vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #282828;
+	text-shadow: 0px 4px 4px #282828;
+    font-size: 1.5rem;
+}
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #28282861;
+    border-radius: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.link-wrapper a{
+    margin: 5%;
 }
 
 .category-buttons {
@@ -192,3 +278,13 @@ html, body {
           #download-button:hover {
             background: #333333;
         }
+
+.experience-category {
+            display: none;
+            animation: fadeIn 2s;
+        }
+
+        .experience-category.active {
+            display: block;
+        }
+
