@@ -33,7 +33,15 @@ html, body {
     text-align: center;
     font-size: 2em;
     font-weight: 800;
-    color: #fff
+    color: #fff;
+    text-decoration: none;
+    border-right: var(--accent) 2px solid;
+    padding-right: 1vw;
+}
+
+.navbar *:hover {
+    color:#000000;
+    background-color: var(--accent);
 }
 
 @keyframes fadeIn {
@@ -120,6 +128,9 @@ html, body {
 }
 .section-portfolio {
     height: 100vh;
+    max-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .section-experience {
     height: 70vh;
@@ -207,12 +218,18 @@ html, body {
 .project-category { 
     display: none;
     animation: fadeIn 2s;
+    padding-top: 2vh;
 }
 .project-category.active {
     display:block;
 }
-.project-box {
-
+.project-category a {
+border-bottom: var(--accent) 3px solid;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    color: #fff;
+    font-style: normal;
+    text-decoration: none;
 }
 .project-buttons {
     display: flex;
