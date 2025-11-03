@@ -127,10 +127,9 @@ html, body {
     height: 30vh;
 }
 .section-portfolio {
-    height: 100vh;
-    max-height: 100vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    height: 125vh;
+    max-height: 120vh;
+
 }
 .section-experience {
     height: 70vh;
@@ -218,7 +217,25 @@ html, body {
 .project-category { 
     display: none;
     animation: fadeIn 2s;
-    padding-top: 2vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+    border-left: 2px solid var(--accent);
+    border-top: 2px solid var(--accent);
+    padding: 2vh;
+}
+
+.project-category p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.project-category li {
+        font-size: 1.25rem;
+    line-height: 1.5;
+}
+.project-category h3 {
+    font-weight: 800;
+    font-size: 2rem;
 }
 .project-category.active {
     display:block;
