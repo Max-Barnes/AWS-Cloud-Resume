@@ -50,3 +50,30 @@ projectButtons.forEach((button) => {
     document.getElementById(categoryName).classList.add("active");
   });
 });
+
+
+// grab and insert data from api endpoint, I made the api so silly that i literally just reference the response and that's enough haha
+
+async function fetchVisitorCount() {
+  try {
+    const response = await fetch('https://ltzydqs8uk.execute-api.us-east-2.amazonaws.com/default/getWebsiteVisitors');
+    const data = await response.json();
+    document.getElementById('Visitors').textContent = `Visitor Count: ${data}`;
+  } catch (error) {
+    console.error('Error fetching visitor count:', error);
+    document.getElementById('Visitors').textContent = 'Looks like the visitor counter went to lunch, will fix soon!';
+  }
+}
+
+async function incrementVisitorCount() {
+  try {
+    await fetch('https://ltzydqs8uk.execute-api.us-east-2.amazonaws.com/default/writeToWebsiteVisitors', {
+      method: 'POST',
+    });
+  } catch (error) {
+    console.error('Error incrementing visitor count:', error);
+  }
+}
+fetchVisitorCount();
+
+incrementVisitorCount();

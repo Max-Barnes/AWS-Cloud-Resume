@@ -356,3 +356,16 @@ border-bottom: var(--accent) 3px solid;
             display: block;
         }
 
+#visitors {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #282828;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
