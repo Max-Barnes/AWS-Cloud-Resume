@@ -97,7 +97,7 @@ html, body {
     flex-direction: row;
     flex-grow: 1;
     flex-basis: 50%;
-
+    padding-bottom: 25vh;
 }
 .skills-container {
     width: 80%;
@@ -122,17 +122,20 @@ html, body {
 .section-experience {
     height: 30vh;
     background-color: #0000009c;
+    padding-bottom: 30vh;
 }
 .section-education {
     height: 30vh;
+    padding-bottom: 25vh;
 }
 .section-portfolio {
     height: 125vh;
     max-height: 120vh;
-
+    padding-bottom: 25vh;
 }
 .section-experience {
     height: 70vh;
+    padding-bottom: 25vh;
 }
 
 .experience-container {

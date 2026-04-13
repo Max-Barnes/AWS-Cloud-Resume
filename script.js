@@ -56,7 +56,7 @@ projectButtons.forEach((button) => {
 
 async function fetchVisitorCount() {
   try {
-    const response = await fetch('https://ltzydqs8uk.execute-api.us-east-2.amazonaws.com/default/getWebsiteVisitors');
+    const response = await fetch('https://api.maxbarnes.com/getWebsiteVisitors');
     const data = await response.json();
     document.getElementById('Visitors').textContent = `Visitor Count: ${data}`;
   } catch (error) {
@@ -67,7 +67,7 @@ async function fetchVisitorCount() {
 
 async function incrementVisitorCount() {
   try {
-    await fetch('https://ltzydqs8uk.execute-api.us-east-2.amazonaws.com/default/writeToWebsiteVisitors', {
+    await fetch('https://api.maxbarnes.com/writeToWebsiteVisitors', {
       method: 'POST',
     });
   } catch (error) {
