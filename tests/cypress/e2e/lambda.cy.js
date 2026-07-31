@@ -20,6 +20,8 @@ describe('Basic Tests', () => {
       })
 
     })
+    cy.reload()
+    
     cy.request('GET', 'https://api.maxbarnes.com/getWebsiteVisitors').then(({body}) => {
       const visitors = Number(body)
     cy.get('#Visitors').should('have.text', `Visitor Count: ${visitors}`);
