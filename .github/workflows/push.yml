@@ -5,7 +5,6 @@ on:
   
 permissions: 
   id-token: write
-  contents: read
 
 jobs:
   Push_To_S3:
@@ -21,7 +20,7 @@ jobs:
           disable-retry: true
           
       - name: Grab new website files
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           sparse-checkout: | 
             site
