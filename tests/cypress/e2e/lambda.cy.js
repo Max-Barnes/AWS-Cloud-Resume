@@ -5,7 +5,7 @@ describe('Basic Tests', () => {
     
   })
 
-  it('has a working API', () => {
+  it('can pull and write to DB', () => {
 
     cy.visit('/')
 
@@ -20,11 +20,15 @@ describe('Basic Tests', () => {
       })
 
     })
-    cy.reload()
-    
+    })
+  })
+
+  it('visitor counter displays correct number', () => {
+
+    cy.visit('/')
+
     cy.request('GET', 'https://api.maxbarnes.com/getWebsiteVisitors').then(({body}) => {
       const visitors = Number(body)
     cy.get('#Visitors').should('have.text', `Visitor Count: ${visitors}`);
     })
   })
-})
