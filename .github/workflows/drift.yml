@@ -1,0 +1,16 @@
+name: test oidc token
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  Check_For_Config_Drift:
+    runs-on: ubuntu-latest
+    permissions: 
+      id-token: write
+      contents: read
+    steps:
+      - name: Debug OIDC Claims
+        uses: github/actions-oidc-debugger@v1
+        with:
+          audience: 'sts.amazon.com'
