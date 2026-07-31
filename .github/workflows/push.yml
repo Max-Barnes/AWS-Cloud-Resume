@@ -1,0 +1,31 @@
+name: Config Drift Check
+
+on:
+  workflow_dispatch: 
+  
+permissions: 
+      id-token: write
+      contents: read
+
+jobs:
+  Check_For_Config_Drift:
+    runs-on: ubuntu-latest
+    
+      
+    steps:
+      - name: Configure Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::732555349688:role/CloudResumeChallengeOIDCRole
+          aws-region: use-east-2
+      - name: Grab new website files
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: | 
+            site
+      - name: Upload new s3 files
+        run: aws s3 cp site s3://maxbeezywebsite/ --recursive --exclude "package.json"
+        
+      - name: Invalidate Cloudfront Cache
+        run: aws cloudfront create-invalidation --distribution-id E19OV94394U98B --paths "/*"
+        
