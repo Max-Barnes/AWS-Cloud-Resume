@@ -1,10 +1,6 @@
 name: Push Changes To S3
 
 on:
-  workflow_run:
-    workflows: ["Cypress Tests"]
-    types:
-    - completed
   workflow_dispatch: 
 
 permissions: 
