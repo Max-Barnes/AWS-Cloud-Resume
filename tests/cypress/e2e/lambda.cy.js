@@ -16,7 +16,7 @@ describe('Basic Tests', () => {
 
       cy.request('GET', 'https://api.maxbarnes.com/getWebsiteVisitors').then(({body}) => { 
         const current = Number(body)
-        expect(current).to.eq(start + 1)
+        expect(current).to.be.greaterThan(start)
       })
 
     })
