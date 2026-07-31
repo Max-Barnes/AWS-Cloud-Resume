@@ -2,21 +2,21 @@ name: Push Changes To S3
 
 on:
   workflow_dispatch: 
-  
+
 permissions: 
   id-token: write
+  contents: read
 
 jobs:
   Push_To_S3:
     runs-on: ubuntu-latest
-    
-      
+  
     steps:
       - name: Configure Credentials
         uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::732555349688:role/CloudResumeChallengeOIDCRole
-          aws-region: us-east-2
+          aws-region: us-east-1
           disable-retry: true
           
       - name: Grab new website files
