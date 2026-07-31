@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  Check_For_Config_Drift:
+  Push_To_S3:
     runs-on: ubuntu-latest
     
       
@@ -17,7 +17,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::732555349688:role/CloudResumeChallengeOIDCRole
-          aws-region: use-east-2
+          aws-region: us-east-2
           
       - name: Grab new website files
         uses: actions/checkout@v4
