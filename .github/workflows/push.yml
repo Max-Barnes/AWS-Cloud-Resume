@@ -18,6 +18,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::732555349688:role/CloudResumeChallengeOIDCRole
           aws-region: us-east-2
+          disable-retry: true
           
       - name: Grab new website files
         uses: actions/checkout@v4
