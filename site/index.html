@@ -37,7 +37,7 @@
               href="https://docs.google.com/document/d/1iKp6N_k9uxwV7sZCxFQCBdIJRNHouzwOcs4ph-3fQdk/edit?tab=t.0"
               target="_blank"
             >
-              Resume
+              Download Resume
             </a>
           </div>
           <div id="Visitors">
@@ -70,13 +70,14 @@
               </h2>
               <ul class="skills-list">
                 <li>JavaScript / Vue.js</li>
-                <li>Python (Django, Flask)</li>
+                <li>Python</li>
                 <li>Java (Spring Boot)</li>
                 <li>SQL Databases (PostgreSQL, MySQL)</li>
-                <li>NoSQL Databases</li>
+                <li>NoSQL Databases (DynamoDB, MongoDB)</li>
                 <li>Bash</li>
                 <li>Powershell</li>
                 <li>Google Apps Script</li>
+                <li>Docker</li>
               </ul>
             </div>
 
@@ -94,18 +95,23 @@
                 <li>Shell Scripting (Bash, PowerShell)</li>
                 <li>Proxmox Hypervisor</li>
                 <li>Cisco Meraki</li>
+                <li>Okta</li>
               </ul>
             </div>
             <!-- DevOps -->
             <div class="skill-category" id="devops">
               <h2 class="category-title">DevOps, Automation, and Cloud</h2>
               <ul class="skills-list">
-                <li>Docker Containerization</li>
+                <li>Docker Swarm</li>
                 <li>Kubernetes Orchestration</li>
                 <li>Github Actions</li>
                 <li>Git Version Control</li>
                 <li>Nginx / Apache</li>
-                <li>AWS S3 (Simple Storage Service)</li>
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>Cloud Migrations</li>
+                <li>Multi-Cloud Architecture</li>
+                <li>AWX & Ansible Automation Platform (AAP)</li>
               </ul>
             </div>
             <!-- Cyber Security -->
@@ -116,7 +122,7 @@
                 <li>Suricata</li>
                 <li>Splunk</li>
                 <li>Chronicle</li>
-                <li>Policy Writing</li>
+                <li>Policy</li>
                 <li>Security Training</li>
                 <li>Ethical Hacking</li>
               </ul>
@@ -130,7 +136,6 @@
                 <li>Communication</li>
                 <li>Leadership</li>
                 <li>Problem Solving</li>
-                <li>Hard Working</li>
                 <li>Customer Service</li>
               </ul>
             </div>
@@ -142,17 +147,30 @@
         <h1>Technical Experience</h1>
         <div class="experience-container">
         <div class="experience-buttons">
-          <button class="experience-button active" data-category="DHS">
-            Infrastructure Support Engineer Intern for Allegheny County DHS
+          <button class="experience-button active" data-category="Ensono">
+            DevOps Intern at Ensono
+            </button>
+          <button class="experience-button" data-category="DHS">
+            Infrastructure Support Engineer Intern at Allegheny County DHS
             </button>
           <button class="experience-button" data-category="portage">
-            Portage Learning IT Intern
+            IT Intern at Portage Learning
           </button>
           <button class="experience-button" data-category="rmu">
-            Robert Morris University Technology Assistant
+            Technology Assistant at Robert Morris University 
           </button>
         </div>
-          <div class="experience-category active" id="DHS">
+        <div class="experience-category active" id="Ensono">
+          <h2>DevOps Intern at Ensono</h2>
+          <h3>Date: May 2026 - August 2026</h3>
+          <p>Developed reusable Windows and Linux AMIs using packer to embed the Z-Scaler agent and standardized system configurations for consistent and secure deployments</p>
+          <p>Monitored system performance and health using Datadog </p>
+          <p>Researched AWS cost optimization strategies such as gp2 to gp3 EBS storage migration and alternatives to high cost network architectures</p>
+          <p>Researched Ensono cloud migration frameworks and AWS migration guidance to evaluate Windows and Linux workload modernization strategies, cloud operating models, and infrastructure automation approaches across AWS and Azure environments</p>
+          <p>Built infrastructure as code with Terraform to create Okta apps and golden images with Ansible and Packer</p>
+          <p>Assisted on Health Event Tickets keeping SLAs compliant and quickly solving problems</p>
+          </div>
+          <div class="experience-category" id="DHS">
           <h2>Infrastructure Support Engineer Intern for Allegheny County DHS</h2>
           <h3>Date: February 2026 - April 2026</h3>
           <p>Assisted in the migration of existing systems to the new Azure and OCI multicloud environment</p>
@@ -170,7 +188,7 @@
           </div>
         <div class="experience-category" id="rmu">
           <h2>Technology Assistant at Robert Morris University</h2>
-          <h3>Date: November 2024 - February 2026</h3>
+          <h3>Date: November 2024 - December 2026</h3>
           <p>Assisted in the implementation of digital signage integrations, incorporating Revolution API along with Rise Vision and Google Apps Script to streamline operations</p>
           <p>Created an automated workflow with Google Apps Script on campus Excel Data to keep events accurate to local times and reducing manual efforts</p>
           <p>Automated and tested scripts for IT tasks essential for events held across campus resulting in increased operational efficiency</p>
@@ -191,14 +209,13 @@
             <a target="_blank">AWS Cloud Resume Challenge</a>
             <p>This website was hosted with AWS! I started with a static S3 website and a CloudFront distribution to prevent access to S3 objects for security. My domain provider is GoDaddy. I used AWS certificate manager for HTTPS</p>
             <h3>Whats next?</h3>
-            <p>I want to add a currently listening on spotify function using the spotify api. This will require me to refresh api keys securely through aws and will be good for security and devops career building</p>
-            <p>I am in the process of creating terraform to automate the deployment of this project</p>
-            <p>I will implement CI/CD for the frontend and backend so I do not need to continuously upload to S3 for updates.</p>
+            <p>I want to add a "currently listening to on spotify" function using the spotify api. This will require me to refresh api keys securely through aws and will be good for security and devops career building</p>
+            <p>I am also currently building a health probe Docker container in my homelab to ensure I know when the website is up or down as well as other AWS information I want</p>
                 <h3>Technical Environment</h3>
         <ul>
             <li><strong>Platform:</strong>Amazon Web Services (AWS)</li>
             <li><strong>Services Used:</strong>EC2, Lambda, S3, CloudFront, CloudTrail, Trusted Advisor, IAM, ACM</li>
-            <li><strong>Automation:</strong>Terraform</li>
+            <li><strong>Automation:</strong>Terraform, Github Actions. Cypress</li>
             <li><strong>Security:</strong>IAM, Security Groups, KMS, Policy, ACLs</li>
 
         </ul>

@@ -148,6 +148,7 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 .experience-button:hover {
     cursor:pointer;
@@ -342,7 +343,7 @@ border-bottom: var(--accent) 3px solid;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 1.25rem;
             transition: background-color 0.3s ease;
             text-decoration: none;
         }
