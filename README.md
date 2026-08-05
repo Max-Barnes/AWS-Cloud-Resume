@@ -10,7 +10,7 @@ My take on the [Cloud Resume Challenge](https://cloudresumechallenge.dev/) — a
 
 This project takes a simple resume webpage and turns it into a fully cloud-hosted, serverless application with a live visitor counter. It touches nearly every layer of the AWS stack — from static hosting and CDN distribution to serverless compute, a NoSQL database, and automated CI/CD deployment.
 
-## Architecture Diagram
+![Diagram](./diagram.png)
 
 ## Tech Stack
 
@@ -29,8 +29,6 @@ This project takes a simple resume webpage and turns it into a fully cloud-hoste
 | Source control | Git / GitHub |
 
 ## What I Built
-
-![Diagram](./diagram.png)
 
 ### 1. Frontend — Resume Website
 - Wrote a static resume site using HTML, CSS, and JavaScript.
